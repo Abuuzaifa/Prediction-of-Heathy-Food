@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Health - Medical Website Template</title>
+<!--
+
+Template 2098 Health
+
+http://www.tooplate.com/view/2098-health
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/animate.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/owl.theme.default.min.css')}}">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='css/tooplate-style.css')}}">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+   <section id="about">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your Prediction Result</h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                  <div class="col-md-12 col-sm-12">
+                                        <label for="telephone">Naive Bayes</label>
+                                        <input type="tel" class="form-control"  placeholder="{{ class1 }} {{score_nb}}" >
+                                      
+                                   </div>
+								   <div class="col-md-12 col-sm-12">
+                                        <label for="telephone">K nearest Neighbour</label>
+                                        <input type="tel" class="form-control"placeholder="{{ class3 }} {{score_knn}}">
+                                      
+                                   </div>
+								   
+								   <div class="col-md-12 col-sm-12">
+                                        <label for="telephone">Decision tree</label>
+                                        <input type="tel" class="form-control"  placeholder="{{ class4 }} {{score_dt}}">
+                                      
+                                   </div>
+								   
+								   <div>
+								   </br>
+								   </br>
+								   </div>
+								        <h5> FOODS Recommended </h5>
+				{% for food in class6: %}
+				<div class="card-image waves-effect waves-block waves-light">
+ 
+                  <h5> {{ food }} </h5>
+
+                </div>
+                {% endfor %}
+                 				
+                <div class="card-image waves-effect waves-block waves-light">
+					   {% if blood_pressure2 %}
+					   <h3> Blood Pressure Factor</h3>
+					   <p> Reduce sodium in your diet</br>Limit the amount of alchohol you drink</br>Eat healthy diet</p>
+					   
+					   	   <iframe width="450" height="200"
+src="https://www.youtube.com/embed/FfR0goXqIy0">
+</iframe>
+
+<h4><a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/in-depth/high-blood-pressure/art-20046974">For More Information </a></h4>
+					   
+					   {% else %}
+					   {% endif %}
+					   {% if suger2 %}
+					   <h4> Sugar Factor</h3>
+					   <h5>Superfoods For Diabetes Control | Best Foods and Fruits for Diabetes patients</h4>
+					    <iframe width="350" height="200"
+src="https://www.youtube.com/watch?v=nbjnCGxb8F0">
+</iframe>
+<h4><a href="https://www.healthline.com/nutrition/15-ways-to-lower-blood-sugar">For More Information </a></h4>
+					   {% else %}
+					   {% endif %}
+					   {% if haemo2 %}
+					   <h3> Hemoglobin Factor</h3>
+					   <h4> Increasing iron intake <br>Increasing folate intake <br> Maximizing iron absorption <br> Taking iron supplements</h4>
+					    <iframe width="350" height="200"
+src="https://www.youtube.com/embed/lSUc4h2vZE4">
+</iframe>
+<h4><a href="https://www.medicalnewstoday.com/articles/321530.php">For More Information </a></h4>
+					   {% else %}
+					   {% endif %}
+					    {% if platelets2 %}
+					   <h3> Platelets Factor</h3>
+					   <h4> Vitamin A is essential for a healthy platelet production <br> Take Folate rich foods <br> Load up on vitamin K <br> Vitamin C rich food</h4>
+					    <iframe width="350" height="200"
+src="https://www.youtube.com/embed/nzGi6EdC71c">
+</iframe>
+
+<h4><a href="https://health.onehowto.com/article/foods-to-raise-platelet-levels-164.html">For More Information </a></h4>
+					   
+
+					   {% else %}
+					   {% endif %}
+					   {% if red_blood_cell2 %}
+					   <h3> Red Blood Cell Factor</h3>
+					   <h4> Take food which are rich in vitamin c to regulate the levels os white and red blood cells    </h4>
+					       <iframe width="350" height="200"
+src="https://www.youtube.com/embed/qLWigi84qRs">
+</iframe>
+<h4><a href="https://labtestsonline.org/tests/red-blood-cell-count-rbc">For More Information </a></h4>
+					   {% else %}
+					   {% endif %}
+					   {% if age2 %}
+					   <h3> Age  factor</h3>
+					   <p> Reduce sodium in your diet</br>Eat More Vegetables</br>Eat healthy diet</p>
+					   
+					   	   <iframe width="350" height="200"
+src="https://www.youtube.com/embed/DRomQhvuFWA">
+</iframe>
+<h4><a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/in-depth/high-blood-pressure/art-20046974">For More Information </a></h4>
+
+					   {% else %}
+					   {% endif %}
+					     {% if weight2 %}
+					   <h3> Weight factor</h3>
+					   <p> Reduce sodium in your diet</br>Limit the amount of alchohol you drink</br>Eat healthy diet</p>
+					   
+					   	   <iframe width="450" height="200"
+src="https://www.youtube.com/embed/DRomQhvuFWA">
+</iframe>
+<h4><a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/in-depth/high-blood-pressure/art-20046974">For More Information </a></h4>
+					   
+					   {% else %}
+					   {% endif %}
+                      					 
+                              </div>
+                            
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+		  
+     </section>
+
+
+
+
+ 
+
+
+
+
+     <!-- SCRIPTS -->
+     <script src="{{url_for('static',filename='js/jquery.js')}}"></script>
+     <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/jquery.sticky.js')}}"></script>
+     <script src="{{url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/smoothscroll.js')}}"></script>
+     <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/custom.js')}}"></script>
+
+</body>
+</html>
